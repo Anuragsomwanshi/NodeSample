@@ -1,14 +1,15 @@
 
 const express = require('express')
-const port = 5000;
 const app = express();
 const db = require('./Models/Database');
+require('dotenv').config();
 app.use(express.json())
 
 const userRouter = require('./routes/userRouter');
 app.use('/person',userRouter);
 
 
+const port = process.env.port||5000;
 app.listen(port,()=>{
     console.log("server started at port:",port);
 })
