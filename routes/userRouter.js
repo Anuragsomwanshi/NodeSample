@@ -15,6 +15,7 @@ router.post('/',async(req,res)=>{
 router.get('/',async(req,res)=>{
   const result = await person.find();
   res.json({result});
+  console.log("data fetched succefully");
   
 })
 
