@@ -16,7 +16,7 @@ const logRequest = (req,res,next)=>{
 
 app.get('/',logRequest,(req,res)=>{
     res.send("welcome to node js series");
-    console.log("reached to welcome endpoint")
+    console.log("this is middleware")
 })
 
 const userRouter = require('./routes/userRouter');
