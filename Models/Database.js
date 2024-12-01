@@ -20,7 +20,12 @@ mongoose.connect(mongodb_url)
 
 const userSchema = new mongoose.Schema({
 
-    Name:{
+   userName:{
+        type:String,
+        require:true,
+    },
+
+    password:{
         type:String,
         require:true,
     },
@@ -32,7 +37,8 @@ const userSchema = new mongoose.Schema({
     Mobile:{
         type:Number,
         require:true,
-    }
+    },
+   
     
 
 })
